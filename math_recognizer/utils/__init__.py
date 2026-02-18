@@ -1,0 +1,1 @@
+from .image_processing import transform_image_to_mnist
