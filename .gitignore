@@ -1,0 +1,36 @@
+.web
+.states
+assets/external/
+*.db
+*.py[cod]
+.config.yaml
+.backup_pws.yaml
+nohw
+
+# Reflex
+.web/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+backup/
+.claude
+
+# JobLib
+*.joblib
+
+# Pickle
+*.pkl
+*.pickle
+
+# Keras
+*.h5
+*.keras
+
+enunciado/

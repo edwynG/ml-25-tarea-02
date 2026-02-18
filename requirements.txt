@@ -1,0 +1,10 @@
+reflex>=0.6.0
+pillow
+numpy
+scipy
+pandas
+tensorflow
+keras
+opencv-python-headless
+joblib
+scikit-learn
