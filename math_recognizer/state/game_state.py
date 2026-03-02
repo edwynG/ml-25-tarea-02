@@ -102,7 +102,7 @@ class GameState(rx.State):
     @staticmethod
     def _flatten(img_28: np.ndarray) -> np.ndarray:
         """Flatten a 28x28 image to (1, 784) float32."""
-        return img_28.reshape(1, -1).astype("float32")
+        return img_28.reshape(1, -1).astype("float32") / 255.0 # Normalize to [0, 1]
 
     @staticmethod
     def _img_to_data_url(img_28x28: np.ndarray) -> str:

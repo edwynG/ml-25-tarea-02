@@ -133,12 +133,13 @@ def prepare_digit_image(image: np.ndarray) -> np.ndarray:
     # PASO 4: Ecualización de histograma
     #   Mejora el contraste. Elimina esta línea si NO usan equalizeHist
     #   durante el entrenamiento.
-    equalized = cv2.equalizeHist(resized)
+    # equalized = cv2.equalizeHist(resized)
 
     # PASO 5: Invertir colores (bitwise_not)
     #   después de esto: fondo=negro (0), trazos=blanco (255) — estilo MNIST.
     #   Elimina esta línea si tu modelo espera imagenes con fondo claro.
-    inverted = cv2.bitwise_not(equalized)
+    # OJO: Cambiamos 'equalized' por 'resized' porque nos saltamos el paso 4.
+    inverted = cv2.bitwise_not(resized)
 
     return inverted
 
